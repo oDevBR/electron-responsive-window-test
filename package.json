@@ -1,0 +1,30 @@
+{
+  "name": "electron-responsive-window-test",
+  "version": "1.0.0",
+  "description": "Electron application with electron-packager and BrowserWindow config",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron --enable-transparent-visuals .",
+    "pack-mac": "electron-packager . --overwrite --asar --platform=darwin --arch=x64 --prune=true --out=release-builds",
+    "pack-win": "electron-packager . --overwrite --asar --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE",
+    "pack-linux": "electron-packager . --overwrite --asar --platform=linux --arch=x64 --prune=true --out=release-builds --enable-transparent-visuals --disable-gpu",
+    "create-installer-win": "node installers/windows/createinstaller.js"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "Joao Aquino",
+  "license": "NO ONE",
+  "devDependencies": {
+    "electron": "^6.0.6",
+    "electron-packager": "^14.0.5"
+  },
+  "dependencies": {
+    "electron-installer-debian": "^2.0.0",
+    "electron-winstaller": "^4.0.0"
+  }
+}
